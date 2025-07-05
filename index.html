@@ -1,52 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Solusi Bersama</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header>
-    <img src="img/logo.png" alt="Company Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#profile">Our Profile</a></li>
-        <li><a href="#contact">Message Us</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT. Pindah Kerja Sejahtera</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/logo-placeholder.png" type="image/png" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <label class="logo">
+          <img src="assets/logo-placeholder.png" alt="Logo Pindah Kerja" />
+          <p>PT. Pindah Kerja Sejahtera</p>
+        </label>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="home">
-      <h1 id="welcome">Hi Name</h1>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Selamat Datang di PT. Pindah Kerja Sejahtera</h1>
+        <p>Solusi Pemindahan Kantor Profesional & Terpercaya</p>
+        <button onclick="alert('Informasi lebih lanjut akan tersedia.')">Lihat Selengkapnya</button>
+      </div>
     </section>
 
-    <section id="profile">
-      <h2>Our Profile</h2>
-      <p>Photo banner here</p>
-      <p>About the company: Lorem ipsum dolor sit amet...</p>
-      <p>Vision and Mission: To deliver quality and innovation...</p>
+    <section class="about" id="about">
+      <h2>Tentang Kami</h2>
+      <p>
+        PT. Pindah Kerja Sejahtera adalah penyedia layanan pemindahan kantor yang mengutamakan keamanan, kecepatan, dan profesionalitas. Dengan tim berpengalaman, kami memastikan proses pindahan Anda berjalan lancar tanpa hambatan.
+      </p>
+      <div class="vision-mission">
+        <div>
+          <h3>Visi</h3>
+          <p>Menjadi mitra terpercaya dalam layanan pemindahan kantor di Indonesia dengan standar layanan tertinggi.</p>
+        </div>
+        <div>
+          <h3>Misi</h3>
+          <ul>
+            <li>Menyediakan layanan aman, cepat, dan profesional.</li>
+            <li>Menjaga kepuasan pelanggan di setiap tahap layanan.</li>
+            <li>Mengutamakan keamanan barang dan kerahasiaan dokumen.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Message Us</h2>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send</button>
+    <section class="services" id="services">
+      <h2>Paket Layanan Kami</h2>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Paket Standar</h3>
+          <p>Pemindahan dasar barang kantor dengan pengemasan dan pengiriman aman.</p>
+        </div>
+        <div class="card">
+          <h3>Paket Premium</h3>
+          <p>Termasuk penataan ulang kantor dan instalasi perangkat IT dasar.</p>
+        </div>
+        <div class="card">
+          <h3>Paket VIP (All-in-One)</h3>
+          <p>Layanan lengkap hingga support teknis, izin pindah, dan pembersihan.</p>
+        </div>
+        <div class="card">
+          <h3>Paket Khusus</h3>
+          <p>Layanan kustom sesuai kebutuhan, termasuk data center & dokumen sensitif.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Hubungi Kami</h2>
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Nama Anda" />
+        <input type="email" id="email" placeholder="Email Anda" />
+        <textarea id="message" placeholder="Pesan Anda"></textarea>
+        <button type="submit">Kirim</button>
       </form>
-      <div id="formResult"></div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Solusi Bersama. All rights reserved.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
+    <footer>
+      <p>© 2025 PT. Pindah Kerja Sejahtera | All rights reserved.</p>
+    </footer>
+  </body>
 </html>
